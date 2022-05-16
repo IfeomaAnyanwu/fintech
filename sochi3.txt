@@ -1,0 +1,1 @@
+Checking wht git diff means.
