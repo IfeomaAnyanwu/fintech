@@ -1,0 +1,36 @@
+Ezichukwu
+ is a good girl
+ Who is a DevOps Engineer?
+DevOps Engineer is somebody who understands the Software Development Lifecycle and has the outright understanding of various automation tools for developing digital pipelines (CI/ CD pipelines).
+
+But the question still endures “Who is a DevOps Engineer?”
+DevOps Engineer works with developers and the IT staff to oversee the code releases. They are either developers who get interested in deployment and network operations or sysadmins who have a passion for scripting and coding and move into the development side where they can improve the planning of test and deployment.
+
+DevOps Job Roles and Responsibilities:
+Let me first list down the various roles along with their description.
+
+DevOps Evangelist – The principal officer (leader) responsible for implementing DevOps
+Release Manager – The one releasing new features & ensuring post-release product stability
+Automation Expert – The guy responsible for achieving automation & orchestration of tools
+Software Developer/ Tester – The one who develops the code and tests it
+Quality Assurance – The one who ensures the quality of the product confims to its requirement
+Security Engineer – The one always monitoring the product’s security & health
+DevOps Evangelist
+Like I mentioned earlier, this is the key role in DevOps. This role is assumed by a leader or that person who is responsible for ensuring that the DevOps strategy is implemented in the end-to-end development of the product, while bringing about a positive difference in the environment.
+
+The DevOps Evangelist also finds ways to improve the existing architecture of the product keeping in mind the various automation tools available and the skills that ‘Dev’ and ‘Ops’ guy consist of. Managing other DevOps roles and obtaining full efficiency from the team is his primary target.
+
+Release Manager
+This role is a key player in the product deliverables because he needs to integrate the new/ updated features with the existing framework. This role can either be the same guy assuming the role of Release Engineer or a Release Manager who is leading a team of Release Engineers.
+
+This role’s key area of focus is to co-ordinate and manage the product from development through deployment. Since this role is involved in an important manner, it should be donned by a technical person (manager) that understands how technology works and how various structures fall in place.
+
+Depending on the requirement, there will be multiple Managers leading their respective teams working on multiple features (projects). 
+
+Automation Expert
+The importance of this role need not be emphasized again because DevOps is all about automation. And being an automation expert, this role should be able understand what can be automated and how a product stack can be integrated with another product stack.
+
+This role which is also called Integration Specialists, analyzes, designs, and implements strategies for continuous deployments while ensuring high availability on production and pre-production systems.
+
+Software Developer/ Tester
+This role(s) does the actual root-level development of the software. The traditional coders and programmers fall under this bracket. Besides development, the professionals are also responsible for testing the code.
