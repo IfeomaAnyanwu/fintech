@@ -1,2 +1,4 @@
 Testing multiline -m message
 
+Just added this line to test diff
+
