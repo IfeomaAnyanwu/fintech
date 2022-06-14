@@ -1,0 +1,204 @@
+1)	What is Shell? 
+Shell is a program that takes commands from the user and gives to the operating system to perform. It is an interpreter, it is a communicator. It is an interface that enables a user interacts with the computer.
+2)	How to check how many shells that Linux/Unix server will support? 
+Cat /etc/shells
+
+[ec2-user@ifeoma ~]$ cat /etc/shells
+/bin/sh
+/bin/bash
+/usr/bin/sh
+/usr/bin/bash
+/bin/ksh
+/bin/rksh
+/usr/bin/ksh
+/usr/bin/rksh
+/bin/csh
+/bin/tcsh
+/usr/bin/csh
+/usr/bin/tcsh
+[ec2-user@ifeoma ~]$
+3) What are the different shell types?
+a. borne shell   - sh – full path = /bin/sh
+b. borne again shell – bash – full path =  /bin/bash
+c.  korn shell   - ksh  - full path =  bin/ksh
+d. c shell -  csh – full path =  /bin/csh
+e. z shell – zsh -	full path =  /bin/zsh
+
+4) How many types of comments does shell script support? 
+Two type:
+a.	single line comment - #
+b.	multi line comment - << any two letters to start the comment.   the two letters again to end the comment
+5) What is command line arguments? 
+They are values passed from command line.
+6) What is the difference between $* and $@ ? 
+S* and S@ are the same. They both mean all arguments. But S? means status of the last argument.
+7) Write down the syntax for if condition? 
+If [condition]
+then
+line or lines of Commands/statements
+fi
+
+8) Write down the syntax for for-loop? 
+for (( initiation; condition; increment/decrement))
+do
+line or lines of Commands/statements
+done
+
+9) Write down the syntax for function and write one function and call that function?
+Syntax:
+Functionname () {
+Lines of commands
+}
+
+functionname
+
+
+#!/bin/bash
+#function definition
+devops_trainee () {
+name="Ifeoma Anyanwu"
+training="DevOps Master Program"
+school="Acada Learning"
+period="1st April to 25th September 2022"
+echo My name is ${name}. I am a $training trainee with i$school from $period.
+echo 'Thank you for listening'
+}
+# function calling
+devops_trainee
+
+
+Tutorial link https://www.tutorialspoint.com/unix/unix-shell-functions.htm 
+
+10) What is the difference between > and >> and < and what is the standard output and 
+standard error codes? 
+11) How to display one variable (take variable name as technology) value? 
+Echo $technology
+12) How many types of variables are in Shell scripting? 
+Two type:
+a.	System defined variables and
+b.	User defined variables
+13) Write some System defined variables? 
+$SHELL, $PWD , $SSH, $LANG, $ HOSTNAME, $USER, $HISTSIZE
+14) What is String? 
+String is a data type used to represent text.
+15) How to find the length of the given string? 
+Echo ${#stringname}
+
+str='Thiscounts the lenght of this string'
+strlenght=${#str}
+echo "The lenght of the above string is $strlenght"
+OR
+str='Thiscounts the lenght of this string'
+#strlenght=${#str}
+echo "The lenght of the above string is ${#str}"
+
+
+16) Write a shell script to accept the name and age from the user and display 
+that back to the user. 
+#!/bin/bash
+# This script will accept user input and display them
+echo -n "Enter your  name: "
+read name
+echo -n "Enter your age: "
+read age
+echo Hello $name. Your are $age yeras old.
+echo Thank you
+17) Write a shell script to accept a file name from the user and make a copy of that file. 
+#!/bin/bash
+# This script will accept file name and copy it
+echo -n "Enter filename: "
+read filename
+echo -n "Enter filename to copy to: "
+read filename2
+cp $filename $filename2
+echo The just copied the content of $filename to $filename2
+echo Congrats, you just copied a file.
+18) Write a shell script to accept file name from the user and display the contents of file. If 
+the file doesn't exist then try curbing the error and display a user-friendly error to user. 
+#!/bin/bash
+# This script will accept file and display the content or display error message
+echo -n "Enter filename: "
+read filename
+if [ -f $filename ]
+then
+cat  $filename
+echo Above is the content of $filename file.
+else
+echo $filename does not exist.
+sh.quest18.sh 2>quest18error_msg
+echo thank you.
+fi
+[ec2-user@ifeoma assynments]$
+
+19) Write a shell script to accept a file name from user and check whether its an ordinary 
+file or a directory. In case of file show the contents of file and if it’s a directory show 
+number of files in that directory. 
+
+#!/bin/bash
+#Write a shell script to accept a file name from user and check whether its an ordinary
+#file or a directory. In case of file show the contents of file and if it’s a directory show
+#number of files in that directory.
+
+echo -n "Enter either filename or directoryname: "
+read name
+if [ -f  $name ]
+then
+echo You just supplied a file name, below is the content
+cat  $name
+echo Thank you
+fi
+
+if [ -d $name  ]
+then
+echo What you supplied is a directory name,the number of files in it is shown below.
+ls | wc -l
+
+fi
+
+20) Write a shell script to accept a file name from user. Check whether file has all the 
+permissions if not assign the respective permissions to that file. 
+
+#!/bin/bash
+
+#Write a shell script to accept a file name from user. Check whether file has all the
+#permissions if not assign the respective permissions to that file.
+
+echo -n "Enter filename: "
+read filename
+if ( [ -r $filename ]  && [ -w $filename ] && [ -x $filename ] )
+then
+echo $filename file has All permissions
+else
+
+echo Supplied file has not all permissions, granting all permissions right away
+
+chmod 777 $filename
+
+echo Check again, all permissions granted.
+echo Thank you.
+fi
+
+21) Write a shell script to accept a file name from the user and sort the file. If the file doesn’t 
+exist curb the error message and show the user-friendly message.
+
+#!/bin/bash
+# a shell script to accept a file name from the user and sort the file. If the file doesn’t
+#exist curb the error message and show the user-friendly message.
+
+
+echo  This script will accept file name from you and sort the file content in ascending order.
+echo -n "Enter filename the content of which you want sorted: "
+read filename
+if [ -f $filename ]
+then
+
+sort  $filename
+
+echo Above is the sorted  content of $filename file.
+else
+echo $filename does not exist.
+sh.quest21.sh 2>quest21error_msg
+echo Thank you.
+fi
+
+
